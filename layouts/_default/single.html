@@ -10,6 +10,7 @@
 </main>
 
 <p class="terms">
+  Tags: 
   {{ range $i := (slice "categories" "tags") }}
   {{ with ($.Param $i) }}
   <!--{{ $i | title }}: -->
