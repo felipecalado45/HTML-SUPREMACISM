@@ -113,3 +113,14 @@ li.draft {
     border: 1px solid green;
     padding: 3px;
 }
+
+.gallery {
+    border: 1px solid black;
+    display: block;
+}
+.gallery-item {
+    border: 1px solid red;
+    display: inline-flex;
+    margin: 1em;
+}
+
