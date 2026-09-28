@@ -1,9 +1,11 @@
-  <footer>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-brand">{{ .Site.Title }}</p>
+      <p>{{ .Site.Params.footer | markdownify }}</p>
+      <a class="back-to-top" href="#main-content">Back to top ↑</a>
+    </div>
   {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
-  <hr/>
-  {{ . | markdownify }}
-  {{ end }}
   </footer>
   </body>
 </html>

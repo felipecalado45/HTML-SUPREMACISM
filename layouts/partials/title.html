@@ -1,9 +1,7 @@
-<div class="pagetitle clearfix">
-  <img style="float: left;" src="/logo.png"/>
-  <h1>
-    {{ .Site.Title }}
-  </h1>
-  <em>
-    {{ .Site.Params.Description }}
-  </em>
-</div>
+<a class="brand" href="{{ "/" | relURL }}" aria-label="{{ .Site.Title }} home">
+  <span class="brand-mark" aria-hidden="true">X</span>
+  <span class="brand-copy">
+    <strong>{{ .Site.Title }}</strong>
+    <small>{{ .Site.Params.description }}</small>
+  </span>
+</a>
