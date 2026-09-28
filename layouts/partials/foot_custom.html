@@ -9,3 +9,14 @@ Powered by <a href="https://gohugo.io/">Hugo</a> and
 <a style="visibility: hidden" rel="me" href="{{ .Site.Params.social.mastodon | safeHTML }}">Mastodon</a>
 </address>
 {{ template "_internal/google_analytics.html" . }}
+<script>
+  document.querySelectorAll("[data-subscribe-form]").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var message = form.querySelector(".form-message");
+      message.textContent = "Thanks — you’re on the list.";
+      form.querySelector("button").textContent = "Subscribed";
+      form.reset();
+    });
+  });
+</script>
