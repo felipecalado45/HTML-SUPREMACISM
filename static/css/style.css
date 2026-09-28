@@ -4,7 +4,7 @@
   --ink: #171715;
   --muted: #706e67;
   --line: #d6d0c4;
-  --accent: #d64d2f;
+  --accent: #a93622;
   --dark: #20211d;
   --max: 1160px;
 }
@@ -114,12 +114,13 @@ h2 { font-size: clamp(38px, 5vw, 60px); letter-spacing: -.04em; line-height: 1; 
 main > .article-meta { border-bottom: 1px solid var(--line); padding: 80px 0 35px; text-align: left; }
 main > .article-meta h1 { font-size: clamp(48px, 7vw, 85px); margin: 0; }
 main > .article-meta .date { color: var(--muted); font: 11px "DM Mono", monospace; }
-main > .article-meta + main { max-width: 720px; padding: 54px 0 35px; }
-main > .article-meta + main h2 { font-size: 38px; margin-top: 55px; }
-main > .article-meta + main h3 { font-size: 28px; margin-top: 40px; }
-main > .article-meta + main img { display: block; height: auto; margin: 30px auto; }
+main > .article-content { max-width: 720px; padding: 54px 0 35px; }
+main > .article-content h2 { font-size: 38px; margin-top: 55px; }
+main > .article-content h3 { font-size: 28px; margin-top: 40px; }
+main > .article-content img { display: block; height: auto; margin: 30px auto; }
 main > .terms { border-top: 1px solid var(--line); color: var(--muted); font: 11px "DM Mono", monospace; padding: 22px 0 70px; }
 main > .terms a { color: var(--accent); margin-right: 12px; }
+main :where(img, video, audio, svg, canvas, iframe, object, embed) { max-width: 100%; }
 pre { background: var(--dark); color: var(--paper); overflow-x: auto; padding: 22px; }
 blockquote { border-left: 3px solid var(--accent); padding-left: 22px; }
 table { border-collapse: collapse; margin: 28px 0; width: 100%; }
@@ -127,7 +128,7 @@ th, td { border-bottom: 1px solid var(--line); padding: 9px; text-align: left; }
 .pagination { display: flex; gap: 18px; justify-content: center; list-style: none; margin: 60px 0; padding: 0; }
 .pagination a { text-decoration: none; }
 @media (prefers-color-scheme: dark) {
-  :root { --paper: #1a1a18; --ink: #f4f0e8; --muted: #aaa79e; --line: #3a3934; --dark: #f4f0e8; }
+  :root { --paper: #1a1a18; --ink: #f4f0e8; --muted: #aaa79e; --line: #3a3934; --dark: #f4f0e8; --accent: #ff8a65; }
   .button-dark { color: #1a1a18; }
   .hero-art, .subscribe-card { background: #302f2a; }
   .article-card:hover { background: #292824; }
